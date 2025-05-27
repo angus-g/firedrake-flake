@@ -50,7 +50,7 @@
             inherit ufl;
           };
           firedrake = pkgs.python3.pkgs.callPackage ./pkgs/firedrake.nix {
-            inherit petsc4py fiat ufl;
+            inherit petsc petsc4py fiat ufl;
           };
         in
         {
