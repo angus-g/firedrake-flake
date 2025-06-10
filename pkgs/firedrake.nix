@@ -10,14 +10,14 @@
 }:
 buildPythonPackage rec {
   pname = "firedrake";
-  version = "2025.4.0.post0";
+  version = "2025.4.1";
   pyproject = true;
 
   src = pkgs.fetchFromGitHub {
     owner = "firedrakeproject";
     repo = "firedrake";
     rev = version;
-    sha256 = "sha256-wQOS4v/YkIwXdQq6JMvRbmyhnzvx6wj0O6aszNa5ZMw=";
+    sha256 = "sha256-p/yquIKWynGY7UESDNBCf1cM8zpy8beuuRxSrSMvj7c=";
   };
 
   build-system = [

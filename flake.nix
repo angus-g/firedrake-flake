@@ -32,14 +32,7 @@
             (pkgs.petsc.override {
               fortranSupport = false;
               scotch = scotch;
-            }).overrideAttrs
-              (old: {
-                version = "3.23.0";
-                src = pkgs.fetchzip {
-                  url = "https://web.cels.anl.gov/projects/petsc/download/release-snapshots/petsc-3.23.0.tar.gz";
-                  hash = "sha256-OcI4iyDOR0YTVV+JoOhbfutoW00EmfapNaMnD/JJFsI=";
-                };
-              });
+            });
           petsc4py = pkgs.python3.pkgs.toPythonModule (
             petsc.override {
               pythonSupport = true;
